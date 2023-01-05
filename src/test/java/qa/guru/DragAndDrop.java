@@ -6,18 +6,9 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DragAndDrop {
-    @Test
-    public void test1() {
-
-        open("https://the-internet.herokuapp.com/drag_and_drop");
-
-        actions().moveToElement($x("//*[@id='column-a']")).clickAndHold().moveByOffset(300, 0).release().perform();
-        $x("//*[@id='column-a']").shouldHave(text("B"));
-        $x("//*[@id='column-b']").shouldHave(text("A"));
-    }
 
     @Test
-    public void test2() {
+    public void test() {
 
         open("https://the-internet.herokuapp.com/drag_and_drop");
 
